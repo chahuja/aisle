@@ -139,5 +139,11 @@ Every experiment multiple files with the same PREFIX:
 [3] - Ginosar, Shiry, et al. "Learning individual styles of conversational gesture." CVPR 2019.
 ```
 
+## Other cool stuff
+If you enjoyed this work, I would recommend the following projects which study different axes of nonverbal grounding,
+- [Mix-StAGe](http://chahuja.com/mix-stage)
+- [Language2Pose](http://chahuja.com/language2pose)
+- [Dialogue2Pose](https://arxiv.org/pdf/1910.02181.pdf)
+
 # Issues
 All research has a tag of work in progress. If you find any issues with this code, feel free to raise issues or pull requests (even better) and I will get to it as soon as humanly possible.
