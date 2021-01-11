@@ -9,7 +9,7 @@ Links: [Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.170.pdf), [D
 
 # Overview
 
-![overview](figs/overview.png)
+<img src="figs/overview.png" alt="drawing" width="400"/>
 
 This repo has information on the training code and pre-trained models. 
 
