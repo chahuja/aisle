@@ -121,9 +121,9 @@ def get_args_perm():
   parser.add_argument('-joint', nargs='+', type=int, default=[0],
                       help='to feed in X to the discriminator along with the fake/real pose set it to 1')
   parser.add_argument('-update_D_prob_flag', nargs='+', type=int, default=[0],
-                      help='Update D_prob in a GAN. True by default') ## TODO change to true for emnlp experiments
+                      help='Update D_prob in a GAN. True by default') 
   parser.add_argument('-no_grad', nargs='+', type=int, default=[0],
-                      help='Use no_grad while training for generator in a GAN. True by default') ## TODO change to true for emnlp experiments
+                      help='Use no_grad while training for generator in a GAN. True by default') 
 
   parser.add_argument('-discriminator', nargs='+', type=str, default=[None],
                       help='name of the discriminator. if None, it will infer from the name of the model')
