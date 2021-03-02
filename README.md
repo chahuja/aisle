@@ -4,8 +4,21 @@ This is the official repository for the paper *No Gestures Left Behind: Learning
 
 [Chaitanya Ahuja](http://chahuja.com), Dong Won Lee, Ryo Ishii, [Louis-Philippe Morency](https://www.cs.cmu.edu/~morency/) - [EMNLP Findings 2020](https://2020.emnlp.org/)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Links: [Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.170.pdf), [Dataset Website [1]](http://chahuja.com/pats)
+
+Bibtex:
+
+```sh
+@inproceedings{ahuja2020no,
+  title={No Gestures Left Behind: Learning Relationships between Spoken Language and Freeform Gestures},
+  author={Ahuja, Chaitanya and Lee, Dong Won and Ishii, Ryo and Morency, Louis-Philippe},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings},
+  pages={1884--1895},
+  year={2020}
+}
+```
 
 # Overview
 
