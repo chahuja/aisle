@@ -13,6 +13,8 @@ def trainer_chooser(args):
     trainer_name += 'Cluster'
   if args.gan:
     trainer_name += 'GAN'
+  if 'Style' in args.model:
+    trainer_name += 'Style'
   if 'Classifier' in args.model:
     trainer_name += 'Classifier'
 

@@ -1408,3 +1408,35 @@ class TrainerLateClusterGAN(TrainerLateGAN):
     return x, y_, y
 
 TrainerJointLateClusterGAN = TrainerLateClusterGAN
+
+
+class TrainerStyleClassifier(Trainer):
+  def __init__(self, args, args_subset, args_dict_update):
+    super().__init__(args, args_subset, args_dict_update)
+    self.running_loss = [0]
+    self.running_count = [1e-10]
+
+  def update_modelKwargs(self):
+    self.modelKwargs.update(self.args.modelKwargs)
+    self.modelKwargs.update({'time_steps':self.data_shape[self.input_modalities[0]][0],
+                             'in_channels':self.data_shape[self.output_modality][-1]-2*len(self.mask),
+                             'shape':self.data_shape,
+                             'style_dict':self.style_dict})
+
+  def get_processed_batch(self, batch):
+    batch = self.pre(batch)
+
+    x = [batch[mod] for mod in self.input_modalities]
+    y_ = batch['style'].long()[:,0]
+
+    x = [x_.to(self.device) for x_ in x]
+    y = y_.to(self.device)
+
+    ## Remove the first joint
+    x = [self.transform(x_) for x_ in x]
+
+    return x, y_, y
+
+  def calculate_metrics(self, y_cap, y_, kwargs_name, **kwargs):
+    return y_cap
+
