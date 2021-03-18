@@ -118,8 +118,18 @@ python sample.py \
 -path2data ../data ## path to data
 ```
 
-### Pre-trained models
-Coming soon
+### Pre-trained models (UPDATE : March 17, 2021)
+Download pretrained models as a multi-part zip file [[1](https://cmu.box.com/s/4c2a7fax036sniupxajf7mt35osabrc7),[2](https://cmu.box.com/s/lpnhd91xf228bx6wugf034a13cltv162)], combine them using `cat aisle-emnlp-pretrained-models.zip.part-* > aisle-emnlp-pretrained-models.zip`and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. 
+
+An example of sampling gesture animations from a pretrained model:
+
+```sh
+python sample.py \
+-load save/pretrained_models/aisle/lec_cosmic/exp_3233_cpk_mmsbert_lfiw_no_update3_speaker_\[\'lec_cosmic\'\]_model_JointLateClusterSoftTransformer12_G_note_mmsbert_lfiw_no_update3_weights.p \
+-path2data ../data
+```
+
+We also release a script to extract the reported results from the pretrained models in `emnlp2020-results.ipynb` which requires the latest version of `pycasper`.
 
 ## Rendering
 
