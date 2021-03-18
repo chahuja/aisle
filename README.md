@@ -101,13 +101,13 @@ python train.py \
  -optim_separate 0.00003 \ ## Use a separate recommended optimizer and learning rate schedule for the language encoder BERT
 ```
 
-Scripts for training models in the paper can be found as follows, *[Coming soon]*
+Example scripts for training models in the paper can be found as follows,
 
-- [Ours]()
-- [Ours w/o G_attn]()
-- [Ours w/o AISLe]()
-- [Gesticulator [2]]() 
-- [Speech2Gesture [3]]()
+- [Ours](src/jobs/ours.py)
+- [Ours w/o G_attn](src/jobs/ours_wo_gattn.py)
+- [Ours w/o AISLe](src/jobs/ours_wo_aisle.py)
+- [Gesticulator [2]](src/jobs/gesticulator.py) 
+- [Speech2Gesture [3]](src/jobs/speech2gesture.py)
 
 ## Inference
 ### Inference for quantitative evaluation
@@ -119,7 +119,7 @@ python sample.py \
 ```
 
 ### Pre-trained models (UPDATE : March 17, 2021)
-Download pretrained models as a multi-part zip file [[1](https://cmu.box.com/s/4c2a7fax036sniupxajf7mt35osabrc7),[2](https://cmu.box.com/s/lpnhd91xf228bx6wugf034a13cltv162)], combine them using `cat aisle-emnlp-pretrained-models.zip.part-* > aisle-emnlp-pretrained-models.zip`and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. 
+Download pretrained models as a multi-part zip file [[A](https://cmu.box.com/s/4c2a7fax036sniupxajf7mt35osabrc7), [B](https://cmu.box.com/s/lpnhd91xf228bx6wugf034a13cltv162)], combine them using `cat aisle-emnlp-pretrained-models.zip.part-* > aisle-emnlp-pretrained-models.zip`and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. 
 
 An example of sampling gesture animations from a pretrained model:
 
