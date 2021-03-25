@@ -119,7 +119,17 @@ python sample.py \
 ```
 
 ### Pre-trained models (UPDATE : March 17, 2021)
-Download pretrained models as a multi-part zip file [[A](https://cmu.box.com/s/4c2a7fax036sniupxajf7mt35osabrc7), [B](https://cmu.box.com/s/lpnhd91xf228bx6wugf034a13cltv162)], combine them using `cat aisle-emnlp-pretrained-models.zip.part-* > aisle-emnlp-pretrained-models.zip`and unzip them in the `src` folder. All the pretrained models can be found in the `save/pretrained_models`. 
+Download pretrained models and unzip them in the `src` folder,
+
+```sh
+cd aisle/src
+wget -O pretrained.zip.part-aa https://cmu.box.com/shared/static/4c2a7fax036sniupxajf7mt35osabrc7.part-aa
+wget -O pretrained.zip.part-ab https://cmu.box.com/shared/static/lpnhd91xf228bx6wugf034a13cltv162.part-ab
+cat pretrained.zip.part-* > pretrained.zip
+unzip pretrained.zip
+```
+
+Once you unzip the file, all the pretrained models can be found in the `save/pretrained_models`. 
 
 An example of sampling gesture animations from a pretrained model:
 
