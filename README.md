@@ -76,12 +76,11 @@ python train.py \
  -path2data ../data ## path to data files
  -speaker '["oliver"]' \ ## Speaker
  -model JointLateClusterSoftTransformer12_G \ ## Name of the model
- -modelKwargs '{"lambda_id": 0.1, "argmax": 1, "some_grad_flag": 1, "train_only": 1}' \ ## List of extra arguments to instantiate an object of the model
  -note aisle \ ## unique identifier for the model to group results
  -save_dir save/aisle \ ## save directory
  -modalities '["pose/normalize", "text/tokens", "audio/log_mel_400"]' \ ## all modalities as a list. output modality first, then input modalities
  -repeat_text 0 \ ## tokens are not repeated to match the audio frame rate
- -fs_new '[15, 15]' \ ## frame rate of each modality
+ -fs_new '15' \ ## frame rate of each modality
  -input_modalities '["text/tokens", "audio/log_mel_400"]' \ ## List of input modalities
  -output_modalities '["pose/normalize"]' \ ## List of output modalities
  -gan 1 \ ## Flag to train with a discriminator on the output
