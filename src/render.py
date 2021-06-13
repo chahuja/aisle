@@ -5,6 +5,7 @@ from parallel import parallel
 
 from argsUtils import argparseNloop
 from pycasper.BookKeeper import BookKeeper
+from pycasper.argsUtils import *
 from htmlUtils.toHTML import makeHTMLfile
 
 import numpy as np
@@ -20,7 +21,9 @@ def render(args, exp_num):
   assert os.path.exists(args.load), 'Load file must exist'
   
   args_subset = ['exp', 'cpk', 'speaker', 'model']
-  book = BookKeeper(args, args_subset, args_dict_update={'render':args.render},
+  args_dict_update = {'render':args.render}
+  args_dict_update.update(get_args_update_dict(args)) ## update all the input args
+  book = BookKeeper(args, args_subset, args_dict_update=args_dict_update,
                     tensorboard=args.tb)
   args = book.args
 
